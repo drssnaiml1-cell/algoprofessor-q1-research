@@ -8,7 +8,7 @@
 
 Website for the AlgoProfessor SCI Q1 Research Paper Training Program and its multimodal research collaboration projects.
 
-[Live site](https://www.q1.algoprofessor.com) · [AlgoProfessor](https://www.algoprofessor.com) · [Enquire](mailto:ceo@algoprofessor.com)
+[AlgoProfessor](https://www.algoprofessor.com) · [Enquire](mailto:ceo@algoprofessor.com)
 
 ![HTML5](https://img.shields.io/badge/HTML5-single%20file-2ba3dd)
 ![Three.js](https://img.shields.io/badge/Three.js-0.160-141413)
@@ -29,7 +29,6 @@ Website for the AlgoProfessor SCI Q1 Research Paper Training Program and its mul
 - [Screenshots](#screenshots)
 - [Tech stack](#tech-stack)
 - [Project structure](#project-structure)
-- [Two versions](#two-versions)
 - [Deploy on cPanel](#deploy-on-cpanel)
 - [Run locally](#run-locally)
 - [Editing content](#editing-content)
@@ -97,10 +96,6 @@ algoprofessor-q1-research/
 ├── counter.php     # Visitor counter endpoint (returns total, today and last 30 days as JSON)
 ├── assets/
 │   └── algoprofessor-logo.svg   # Brand logo (vector), also inlined in index.html
-├── training-site/  # Separate training-led version (headline: "Twelve days from a research gap…")
-│   ├── index.html
-│   ├── counter.php
-│   └── README.md
 ├── docs/           # README screenshots
 │   ├── hero-desktop.png
 │   ├── positions.png
@@ -108,15 +103,6 @@ algoprofessor-q1-research/
 ├── .gitignore      # Keeps the server-generated visits.json out of git
 └── README.md
 ```
-
-## Two versions
-
-| Folder | Leads with | Use it for |
-|---|---|---|
-| Repository root | **Author positions:** "Earn your author position on a Q1 SCI paper" | The research-projects site |
-| [`training-site/`](training-site/) | **12-day training:** "Twelve days from a research gap to a submitted Q1 manuscript" | The training-program site |
-
-Each version is self-contained. Deploy whichever one you need, or both to different subdomains.
 
 ## Deploy on cPanel
 
