@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/algoprofessor-logo.svg" alt="AlgoProfessor logo" width="200">
+
 # AlgoProfessor Q1 Research
 
 **Twelve days from a research gap to a submitted Q1 manuscript.**
@@ -8,7 +10,7 @@ Website for the AlgoProfessor SCI Q1 Research Paper Training Program and its mul
 
 [Live site](https://www.q1.algoprofessor.com) · [AlgoProfessor](https://www.algoprofessor.com) · [Enquire](mailto:ceo@algoprofessor.com)
 
-![HTML5](https://img.shields.io/badge/HTML5-single%20file-d97757)
+![HTML5](https://img.shields.io/badge/HTML5-single%20file-2ba3dd)
 ![Three.js](https://img.shields.io/badge/Three.js-0.160-141413)
 ![GSAP](https://img.shields.io/badge/GSAP-ScrollTrigger-6a9a7b)
 ![PHP](https://img.shields.io/badge/PHP-visitor%20counter-777bb4)
@@ -81,6 +83,7 @@ The lead mentor is **Dr S Satyanarayana Ph.D., PDF(AI), FARSC**, International P
 | 3D | [Three.js](https://threejs.org) 0.160.0 as an ES module via import map (jsDelivr) |
 | Scroll animation | [GSAP](https://gsap.com) 3.12.5 + ScrollTrigger (cdnjs) |
 | Type | Source Serif 4 (headings) and Inter (text), from Google Fonts |
+| Brand | AlgoProfessor logo (inline SVG), colours `#1D5A7A` and `#2BA3DD` |
 | Visitor counter | PHP 7.4+ with a JSON file store and file locking |
 | Hosting | Any static host. The counter needs PHP (cPanel) |
 
@@ -90,6 +93,8 @@ The lead mentor is **Dr S Satyanarayana Ph.D., PDF(AI), FARSC**, International P
 algoprofessor-q1-research/
 ├── index.html      # The whole site: markup, styles, data arrays, UI script, 3D module
 ├── counter.php     # Visitor counter endpoint (returns total, today and last 30 days as JSON)
+├── assets/
+│   └── algoprofessor-logo.svg   # Brand logo (vector), also inlined in index.html
 ├── docs/           # README screenshots
 │   ├── hero-desktop.png
 │   ├── journey.png
@@ -138,7 +143,7 @@ All content lives in plain JavaScript arrays near the end of `index.html`. Edit 
 
 **Marking a seat as filled:** in `P`, the array `s` holds one entry per role. `0` means open and `1` means filled. For example, `s:[1,1,0,0,0,0]` shows roles 1 and 2 as filled.
 
-**Colours:** the theme is set by CSS variables at the top of the `<style>` block (`--bg`, `--ink`, `--clay`, `--panel`, `--line`). The 3D colours are the hex values in the module script (`#d97757`, `#f0c9b4`).
+**Brand and colours:** the site uses the AlgoProfessor logo colours, deep blue `#1D5A7A` and sky blue `#2BA3DD`. The logo is inlined as SVG in the navigation, the mentor section and the footer, and it's also the favicon. The theme is set by CSS variables at the top of the `<style>` block (`--bg`, `--ink`, `--clay` for the accent, `--panel`, `--line`). The 3D colours are the hex values in the module script (`#2ba3dd`, `#a9dcf4`, `0x1d5a7a`).
 
 ## Visitor counter
 
