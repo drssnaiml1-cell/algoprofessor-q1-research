@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlgoProfessor Q1 Research</title>
+<meta name="description" content="AlgoProfessor SCI Q1 Research Paper Training Program (12 days) and contribution-based Research Collaboration cohorts for IEEE, Elsevier, Springer and Wiley Q1 journals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  calm, neat, conversational: the quiet warmth of the Claude interface
+   IDEA   a 12-day research notebook: each day a page with one deliverable, plus six named seats at a project table
+   PICTURE the 12-day plan itself, drawn as a tidy calendar strip in four phases, at the top
+   COLOUR warm paper #faf9f5, ink #141413, clay #d97757 accent, soft sand panels
+   TYPE   Source Serif 4 headings + Inter text
+   LAYOUT title and two tracks across the top, calendar strip full width beneath; quiet sections below */
+:root{color-scheme:light dark;--bg:light-dark(#faf9f5,#262624);--ink:light-dark(#141413,#f5f4ee);--mut:light-dark(#5e5d59,#b7b5a9);--panel:light-dark(#f0eee6,#30302e);--card:light-dark(#ffffff,#2f2f2d);--line:light-dark(#e3dfd3,#40403c);--clay:#d97757;--clay2:light-dark(#c15f3c,#e8906f);--soft:light-dark(#f6e3da,#4a3329)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.015em;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,4.6vw,52px)}
+h2{font-size:clamp(28px,3.2vw,38px);margin-bottom:10px}
+h3{font-size:20px;font-weight:600}
+p{margin:0 0 12px}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(44px,5.5vw,84px) max(5vw,16px)}
+.lede{color:var(--mut);max-width:64ch;font-size:17px}
+.note{font-size:14px;color:var(--mut)}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px max(5vw,16px)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;font-size:17px}
+.links{display:flex;gap:2px 20px;flex-wrap:wrap;margin-left:auto;font-size:15px;color:var(--mut)}
+.links a{text-decoration:none;padding:10px 0}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:10px;background:var(--ink);color:var(--bg);font:inherit;font-weight:500;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn:hover{opacity:.88}
+.btn.clay{background:var(--clay);color:#fff}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.line:hover{background:var(--panel)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+.hero{overflow:hidden}
+.hero .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 40px;align-items:center}
+.globe{position:relative;height:clamp(340px,40vw,540px);border-radius:50%}
+.globe::before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--clay) 22%,transparent),transparent 68%);filter:blur(10px)}
+.globe canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.globe .cap{position:absolute;left:0;right:0;bottom:2%;text-align:center;font-size:13px;color:var(--mut)}
+.zoomtxt{transform-origin:0 60%;will-change:transform,opacity}
+.hero p.lede{font-size:18px}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:14px;padding:5px 12px;border-radius:99px;background:var(--soft);color:var(--clay2);margin-bottom:16px}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--clay)}
+.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+.track{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none}
+.track:hover{border-color:var(--clay)}
+.track .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center}
+.track b{display:block;font-weight:600}
+.track span{color:var(--mut);font-size:14px}
+.track .pr{font-family:"Source Serif 4",serif;font-size:18px;color:var(--ink);white-space:nowrap}
+.cal{margin-top:36px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.cal .head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:14px}
+.cal .head b{font-family:"Source Serif 4",serif;font-size:20px;font-weight:600}
+.phases{display:grid;grid-template-columns:3fr 4fr 3fr 2fr;gap:10px}
+.ph{display:grid;gap:8px}
+.ph>small{font-size:13px;color:var(--mut);display:flex;gap:6px;align-items:center}
+.ph>small i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.days{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px}
+.day{min-height:96px;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px;border:1px solid transparent;cursor:pointer;text-align:left;font:inherit;color:var(--ink)}
+.day:hover,.day[aria-pressed=true]{border-color:var(--clay)}
+.day b{font-family:"Source Serif 4",serif;font-size:22px;line-height:1}
+.day span{font-size:13px;line-height:1.35}
+.detail{margin-top:14px;display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px 24px;align-items:start;border-top:1px solid var(--line);padding-top:14px}
+.detail .dn{font-family:"Source Serif 4",serif;font-size:40px;line-height:1;color:var(--clay)}
+.detail h3{margin-bottom:4px}
+.detail .k{font-size:13px;color:var(--mut);margin-bottom:2px}
+.sec-alt{background:var(--panel)}
+.jtable{width:100%;border-collapse:collapse;margin-top:22px;font-size:16px}
+.jtable th{text-align:left;font-weight:500;color:var(--mut);font-size:14px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.jtable td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.jtable td:first-child{font-family:"Source Serif 4",serif;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{font-size:14px;padding:6px 12px;border-radius:99px;background:var(--card);border:1px solid var(--line);white-space:nowrap}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{display:block;font-family:"Source Serif 4",serif;font-size:34px;font-weight:500;line-height:1.1}
+.stat span{color:var(--mut);font-size:14px}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}
+.role{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:6px;align-content:start}
+.role .n{width:32px;height:32px;border-radius:9px;background:var(--soft);color:var(--clay2);display:grid;place-items:center;font-weight:600;font-size:15px}
+.role small{color:var(--mut);font-size:13px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.filters button{min-height:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.proj h3{font-size:18px;line-height:1.25}
+.proj .v{font-size:14px;color:var(--mut)}
+.seats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin-top:auto}
+.seat{height:30px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:600;border:1px dashed var(--clay);color:var(--clay2)}
+.seat.f{background:var(--panel);border:1px solid var(--line);color:var(--mut)}
+.proj .row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}
+.proj .row a{color:var(--clay2);font-weight:600;text-decoration:none}
+.incl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;margin-top:20px;padding:0;list-style:none}
+.incl li{padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative}
+.incl li::before{content:"";position:absolute;left:2px;top:19px;width:12px;height:7px;border-left:2px solid var(--clay);border-bottom:2px solid var(--clay);transform:rotate(-45deg)}
+.check{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:4px}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--clay);flex:none}
+.verdict{margin-top:10px;padding:14px;border-radius:12px;background:var(--soft)}
+.verdict b{font-family:"Source Serif 4",serif;font-size:19px;font-weight:600;display:block}
+.mentor{display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:start}
+.mono{width:200px;height:200px;border-radius:24px;background:var(--soft);display:grid;place-items:center;font-family:"Source Serif 4",serif;font-size:64px;color:var(--clay2)}
+.creds{padding:0;margin:14px 0 0;list-style:none;display:grid;gap:8px}
+.creds li{padding-left:18px;position:relative}
+.creds li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+.fees{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}
+.fee{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.fee.main{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
+.fee .amt{font-family:"Source Serif 4",serif;font-size:36px;line-height:1.1;white-space:nowrap}
+.fee ul{padding-left:18px;margin:0;color:var(--mut);font-size:15px}
+.fee .btn{margin-top:auto}
+.policy{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.policy div{border-top:2px solid var(--clay);padding-top:12px}
+.policy p{color:var(--mut);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:16px 0;font-weight:500;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--clay);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--mut);max-width:72ch}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.fr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+label.f{display:grid;gap:6px;font-size:14px;font-weight:500}
+input,select,textarea{font:inherit;font-size:16px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:44px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.ack{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.ack input{width:20px;min-height:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--clay)}
+#out{display:none;border-radius:12px;padding:14px;background:var(--soft)}
+#out pre{white-space:pre-wrap;font:13px/1.5 ui-monospace,monospace;margin:8px 0;overflow-wrap:anywhere}
+.err{color:#b3261e;font-size:14px;min-height:1em}
+footer{border-top:1px solid var(--line);font-size:15px;color:var(--mut)}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(2,minmax(0,1fr));gap:28px}
+footer h3{color:var(--ink);font-size:17px;margin-bottom:8px}
+footer .legal{border-top:1px solid var(--line);margin-top:26px;padding-top:16px;font-size:13px}
+@media(max-width:900px){.tracks{grid-template-columns:minmax(0,1fr)}.hero .top,.two,.mentor{grid-template-columns:minmax(0,1fr)}.roles,.grid,.fees{grid-template-columns:repeat(2,minmax(0,1fr))}.policy{grid-template-columns:repeat(2,minmax(0,1fr))}.phases{grid-template-columns:1fr 1fr}.detail{grid-template-columns:auto minmax(0,1fr)}.detail>div:last-child{grid-column:2}footer .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){nav .vis{display:none}.roles,.grid,.fees,.policy,.incl,.fr,.stats,footer .wrap{grid-template-columns:minmax(0,1fr)}.phases{grid-template-columns:minmax(0,1fr)}.day{min-height:84px}.links{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap}.links a{flex:none}nav .btn{display:none}.jtable thead{display:none}.jtable tr{display:grid;padding:10px 0;border-bottom:1px solid var(--line)}.jtable td{border:0;padding:2px 0}.track{grid-template-columns:44px minmax(0,1fr)}.track .pr{grid-column:2}.mono{width:120px;height:120px;font-size:40px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+nav,header,section,footer{position:relative;z-index:1}
+nav{z-index:20}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--clay);z-index:30}
+.vis{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);padding:4px 10px;border:1px solid var(--line);border-radius:99px;white-space:nowrap}
+.vis i{width:7px;height:7px;border-radius:50%;background:#3aa76d;box-shadow:0 0 0 0 #3aa76d88;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px #3aa76d00}100%{box-shadow:0 0 0 0 #3aa76d00}}
+.tilt{transition:transform .25s ease,border-color .2s;transform-style:preserve-3d;will-change:transform}
+.js .rv{opacity:0;transform:translateY(40px) scale(.94);transition:opacity .8s ease,transform .9s cubic-bezier(.16,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.hint{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);font-size:13px;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:4px}
+.hint span{width:20px;height:32px;border:1.5px solid var(--mut);border-radius:12px;position:relative}
+.hint span::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--clay);animation:wheel 1.6s infinite}
+@keyframes wheel{to{transform:translateY(10px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.vis i,.hint span::after{animation:none}.tilt{transition:none}}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div id="prog" aria-hidden="true"></div>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#d97757"/><path d="M8 20 14 7l6 13M10.5 15h7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>AlgoProfessor Q1</a>
+    <div class="links"><a href="#training">12-day training</a><a href="#journals">Journals</a><a href="#authorship">Authorship roles</a><a href="#mentor">Mentor</a><a href="#fees">Fees</a><a href="#faq">FAQ</a></div>
+    <span class="vis" title="Unique visitors"><i></i><span id="vcNav">Visitors</span></span>
+    <a class="btn" href="#enquire">Reserve a seat</a>
+  </div>
+</nav>
+
+<header class="band hero" id="top">
+  <div class="wrap">
+    <div class="top">
+      <div class="zoomtxt">
+        <span class="pill">Admissions open for the next batch</span>
+        <h1>Twelve days from a research gap to a submitted Q1 manuscript</h1>
+        <p class="lede" style="margin-top:16px">Live daily sessions where you write one section of your own paper each day, and a mentor reviews it before the next session. For bigger projects, join a supervised research team where your author position follows what you contribute.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px"><a class="btn clay" href="#enquire">Send an enquiry</a><a class="btn line" href="#training">See the 12 days</a></div>
+      </div>
+      <div class="globe" id="globe" aria-hidden="true"><canvas id="webgl"></canvas><div class="cap">Six roles orbiting one Q1 paper · move your mouse</div></div>
+    </div>
+    <div class="tracks rv">
+        <a class="track tilt" href="#training"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97757" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>SCI Q1 Paper Writing Training</b><span>12 live days, your own paper, submitted on Day 12</span></span><span class="pr">₹2,00,000</span></a>
+        <a class="track tilt" href="#authorship"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97757" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M14 15c3 0 8 1 8 5"/></svg></span><span><b>10 multimodal research projects</b><span>Six open roles each, Q1 SCI journals only</span></span><span class="pr">Enquire</span></a>
+        <a class="track tilt" href="#check"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97757" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span><b>Readiness self-check</b><span>Five questions to find the right track</span></span><span class="pr">Free</span></a>
+      </div>
+
+    <div class="cal rv tilt" id="cal">
+      <div class="head"><b>The 12-day journey</b><span class="note">Choose a day to see its session and deliverable</span></div>
+      <div class="phases" id="phases"></div>
+      <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+  </div>
+</header>
+
+<section class="band sec-alt" id="journals">
+  <div class="wrap two rv">
+    <div>
+      <h2>Journals where our participants have published</h2>
+      <p class="lede">A sample of venues from our track record, along with many other leading journals. Quartiles shift every year with the JCR release, so on Day 1 we check the current quartile, scope, review time and APC for each shortlisted journal.</p>
+      <table class="jtable">
+        <thead><tr><th>Journal</th><th>Publisher</th></tr></thead>
+        <tbody id="jrows"></tbody>
+      </table>
+      <div class="chips" aria-label="Target publishers and indexes"><span class="chip">IEEE Transactions</span><span class="chip">Elsevier</span><span class="chip">Springer</span><span class="chip">Wiley</span><span class="chip">Taylor & Francis</span><span class="chip">ACM</span><span class="chip">Nature portfolio</span><span class="chip">SCI-indexed</span><span class="chip">Scopus Q1/Q2</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-n="100" data-s="+">100+</b><span>satisfied clients</span></div>
+      <div class="stat"><b data-n="20" data-s="+">20+</b><span>years of publishing</span></div>
+      <div class="stat"><b data-n="20">20</b><span>research areas mentored</span></div>
+      <div class="stat"><b data-n="60" data-s="+">60+</b><span>papers by the lead mentor</span></div>
+      <div class="stat"><b id="vcTotal">–</b><span id="vcLbl">website visitors</span></div>
+      <div class="stat"><b data-n="60">60</b><span>open research seats</span></div>
+      <div class="stat" style="grid-column:1/-1"><span>Participants join from</span><p style="margin:6px 0 0">USA, Canada, India, UK, Australia, Singapore, Germany, UAE and Malaysia</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="training">
+  <div class="wrap rv">
+    <h2>What the training covers</h2>
+    <p class="lede">Ten modules across the 12 days, built for researchers in large language models and 19 other areas. Sessions run live online, scheduled to suit your time zone.</p>
+    <ul class="incl" id="incl"></ul>
+    <div class="chips" id="areas" aria-label="Research areas"></div>
+  </div>
+</section>
+
+<section class="band sec-alt" id="authorship">
+  <div class="wrap rv">
+    <h2>10 open multimodal research projects</h2>
+    <p class="lede">Ten projects across ten domains, each fusing two or more data modalities, each aimed only at a Q1 SCI journal. Every project has six open seats, one per contribution role, mapped to the CRediT taxonomy that IEEE, Elsevier, Springer and Wiley use. Seat numbers name the role, not the final author position. Author order is agreed in writing at internal review, based on each member's logged work.</p>
+    <div class="roles" id="roles"></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects by field"></div>
+    <div class="grid" id="grid"></div>
+    <p class="note" style="margin-top:12px">All 60 seats are open. Fees are discussed when you enquire. Each team picks its Q1 SCI journal at kickoff, after checking scope and the current quartile.</p>
+  </div>
+</section>
+
+<section class="band" id="check">
+  <div class="wrap two rv">
+    <div>
+      <h2>Are you ready for the 12 days?</h2>
+      <p class="lede">Tick what's true today. The training moves fast, so it works best when you already have a topic and can code. If not, a collaboration cohort gives you more time and a team.</p>
+    </div>
+    <div class="check" id="chk">
+      <label><input type="checkbox" id="c1">I have a research topic or a rough gap in mind</label>
+      <label><input type="checkbox" id="c2">I can write and run Python with PyTorch or TensorFlow</label>
+      <label><input type="checkbox" id="c3">I have access to a dataset, or can get one this month</label>
+      <label><input type="checkbox" id="c4">I can give 3 to 4 hours a day for 12 consecutive days</label>
+      <label><input type="checkbox" id="c5">I've read at least 15 papers in my area</label>
+      <div class="verdict" id="vd" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sec-alt" id="mentor">
+  <div class="wrap mentor rv">
+    <div class="mono" aria-hidden="true">SS</div>
+    <div>
+      <h2>Your lead mentor</h2>
+      <h3 style="margin-top:4px">Dr S Satyanarayana Ph.D., PDF(AI), FARSC</h3>
+      <p class="note" style="margin-top:6px">Founder, CEO & Chief Agentic AI Scientist, AlgoProfessor AI R&D Solutions, Hyderabad</p>
+      <ul class="creds">
+        <li>International Postdoctoral Research Co-Supervisor at NYUST (YunTech) and NKUST, Taiwan</li>
+        <li>60+ SCI, Scopus and IEEE publications, 11+ patents and 11 books</li>
+        <li>56 scholars mentored: 8 Ph.D., 38 international and 10 national postdocs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="fees">
+  <div class="wrap rv">
+    <h2>Fees</h2>
+    <p class="lede">One fee per track, with no staged charges. Journals may charge their own article processing fees for open access. Those are separate and you pay them to the journal.</p>
+    <div class="fees">
+      <div class="fee main"><h3>Training, India</h3><div class="amt">₹2,00,000</div><ul><li>12 days of live training</li><li>Mentor review of every deliverable</li><li>Q1 submission on Day 12</li><li>Rebuttal template</li></ul><a class="btn clay" href="#enquire" data-t="0">Enquire</a></div>
+      <div class="fee"><h3>Training, international</h3><div class="amt">US$2,500</div><ul><li>Everything in the India plan</li><li>Sessions set to your time zone</li><li>Same mentor and deliverables</li></ul><a class="btn line" href="#enquire" data-t="0">Enquire</a></div>
+      <div class="fee"><h3>Multimodal research projects</h3><div class="amt" style="font-size:28px">Discussed on enquiry</div><ul><li>4 to 7 months, team of six</li><li>Supervision, compute and editing</li><li>Credit follows contribution</li></ul><a class="btn line" href="#enquire" data-t="1">Enquire</a></div>
+    </div>
+    <div class="policy">
+      <div><h3>No guaranteed acceptance</h3><p>Editors and reviewers decide. We guarantee a complete, submission-ready manuscript and support through revision.</p></div>
+      <div><h3>You write your paper</h3><p>Mentors teach and review. They don't ghost-write, and no names are added that didn't contribute.</p></div>
+      <div><h3>Positions aren't sold</h3><p>Fees pay for teaching, supervision and support. Authorship follows journal policy and your institution's rules.</p></div>
+      <div><h3>Transparent submission</h3><p>Day 12 covers the similarity check, an AI-use disclosure, and the cover letter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sec-alt" id="faq">
+  <div class="wrap two rv">
+    <div><h2>Frequently asked</h2><p class="lede">Anything else goes to contact@algoprofessor.com.</p></div>
+    <div id="faql"></div>
+  </div>
+</section>
+
+<section class="band" id="enquire">
+  <div class="wrap two rv">
+    <div>
+      <h2>Reserve a seat</h2>
+      <p class="lede">Send an enquiry. We reply by email, set up a scoping call to check fit, and agree your batch dates.</p>
+      <p class="note">Enrolment: ceo@algoprofessor.com<br>General enquiries: contact@algoprofessor.com</p>
+    </div>
+    <form id="f" novalidate>
+      <div class="fr"><label class="f" for="nm">Full name<input id="nm" autocomplete="name"></label><label class="f" for="em">Email<input id="em" type="email" autocomplete="email"></label></div>
+      <div class="fr"><label class="f" for="ph">Phone or WhatsApp<input id="ph" type="tel" autocomplete="tel"></label><label class="f" for="co">Country<input id="co" autocomplete="country-name"></label></div>
+      <div class="fr"><label class="f" for="tr">Track<select id="tr"><option>SCI Q1 Paper Writing Training (12 days)</option><option>Research Collaboration Cohort</option></select></label><label class="f" for="rl">Role<select id="rl"><option>Ph.D. scholar</option><option>Faculty</option><option>Postdoctoral researcher</option><option>Industry researcher</option><option>Student</option></select></label></div>
+      <div class="fr"><label class="f" for="og">Organisation<input id="og" autocomplete="organization"></label><label class="f" for="ar">Research area<select id="ar"></select></label></div>
+      <div class="fr"><label class="f" for="st">Paper stage<select id="st"><option>Idea only</option><option>Experiments in progress</option><option>Results ready</option><option>Draft written</option><option>Rejected, revising</option></select></label><label class="f" for="ps">Preferred start<select id="ps"><option>Next available batch</option><option>Within 1 month</option><option>In 2 to 3 months</option><option>Flexible</option></select></label></div>
+      <div class="fr"><label class="f" for="pj">Project (for the research track)<select id="pj"></select></label><label class="f" for="pr">Role you want<select id="pr"></select></label></div>
+      <label class="f" for="tj">Target journal (optional)<input id="tj" placeholder="Any Q1 SCI journal you have in mind"></label>
+      <label class="f" for="sm">Research summary (optional)<textarea id="sm"></textarea></label>
+      <label class="ack" for="ag"><input id="ag" type="checkbox"><span>I understand that acceptance isn't guaranteed and that authorship follows contribution and journal policy.</span></label>
+      <div class="err" id="er" aria-live="polite"></div>
+      <button class="btn clay" type="submit">Prepare enquiry</button>
+      <div id="out" aria-live="polite"><b>Your enquiry is ready.</b> Copy it and send it to ceo@algoprofessor.com, or open it in your mail app.<pre id="txt"></pre><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="button" id="cp">Copy text</button><a class="btn line" id="ml" href="#">Open in mail app</a></div></div>
+    </form>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="wrap">
+    <div><h3>AlgoProfessor AI R&D Solutions</h3><p>Hyderabad, India. SCI Q1 research paper training and supervised research collaboration.</p><p>Also see the <a href="https://www.internship.algoprofessor.com">90-day AI internship</a>.</p></div>
+    <div><h3>Contact</h3><p>ceo@algoprofessor.com<br>contact@algoprofessor.com<br><a href="https://www.algoprofessor.com">www.algoprofessor.com</a></p></div>
+    <div><h3>Policies</h3><p><a href="https://www.internship.algoprofessor.com">Terms</a><br><a href="https://www.internship.algoprofessor.com">Privacy</a><br><a href="https://www.internship.algoprofessor.com">Refund and cancellation</a></p></div>
+  </div>
+  <div class="wrap legal">IEEE, Elsevier, Springer, Wiley, Taylor & Francis, ACM and Nature are trademarks of their owners and are named only as target venues. AlgoProfessor isn't affiliated with or endorsed by them. © 2026 AlgoProfessor AI R&D Solutions.</div>
+</footer>
+
+<script>
+{
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const PH=[["Discover","#f4ece4","#34302c",3],["Write the core","#f4ece4","#34302c",4],["Build and prove","#f4ece4","#34302c",3],["Publish","#d97757","#a4532f",2]];
+const SH=["Journal & gap","Problem & title","Literature review","Introduction","Methodology","Algorithm","Maths & proofs","Coding","Experiments","Figures & LaTeX","Abstract & code","Submit & rebut"];
+const D=[
+["Journal targeting and research gap","Journal shortlist and an approved gap statement"],
+["Problem formulation, title and keywords","Problem statement, contribution list, final title and keywords"],
+["Literature review and survey","Related-work draft, comparison table and .bib library"],
+["Introduction, background and motivation","Introduction of about 1 to 1.5 two-column pages"],
+["Methodology and experimental design","Methodology outline and protocol table"],
+["Algorithm development and pseudocode","Proposed-method section with Algorithm 1 and complexity analysis"],
+["Mathematical formulation and proofs","Numbered equations and a notation table"],
+["Implementation in Python, TensorFlow or PyTorch","Working implementation and first logged results"],
+["Experiments, statistics and comparison","Results tables and a Results and Discussion draft"],
+["Figures, diagrams and LaTeX","Full manuscript compiled in the IEEE or Springer template"],
+["Abstract, reproducibility and references","Final abstract, public code repository and clean references"],
+["Desk-rejection check, submission and rebuttal","Submitted manuscript with submission ID and a rebuttal template"]];
+let sel=0;
+const ph=document.getElementById("phases"),dt=document.getElementById("detail");
+const dark=()=>{const t=document.documentElement.dataset.theme;return t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches)};
+const drawCal=()=>{let n=0;const dk=dark();ph.innerHTML=PH.map(([nm,l,d,c],pi)=>{const bg=dk?d:l,fg=pi===3?"#fff":"inherit";const cells=Array.from({length:c},()=>{const i=n++;return `<button type="button" class="day" data-d="${i}" aria-pressed="${i===sel}" style="background:${bg};color:${pi===3?"#fff":"var(--ink)"}"><b>${i+1}</b><span>${esc(SH[i])}</span></button>`}).join("");return `<div class="ph"><small><i style="background:${pi===3?"#d97757":bg};border:1px solid var(--line)"></i>${esc(nm)}</small><div class="days">${cells}</div></div>`}).join("");
+ dt.innerHTML=`<div class="dn">Day ${sel+1}</div><div><div class="k">Session</div><h3>${esc(D[sel][0])}</h3></div><div><div class="k">You leave with</div><p style="margin:0">${esc(D[sel][1])}</p></div>`};
+ph.addEventListener("click",e=>{const b=e.target.closest(".day");if(!b)return;sel=+b.dataset.d;drawCal()});
+ph.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){sel=(sel+(e.key==="ArrowRight"?1:11))%12;drawCal();ph.querySelector(`[data-d="${sel}"]`).focus()}});
+drawCal();
+new MutationObserver(drawCal).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+const J=[["Journal of Big Data","Springer Nature (SpringerOpen)"],["Concurrency and Computation: Practice and Experience","Wiley"],["Computer Networks","Elsevier"],["Biomedical Signal Processing and Control","Elsevier"],["Knowledge and Information Systems","Springer"],["International Journal of Information Technology","Springer"],["IEEE Internet of Things Journal","IEEE"]];
+document.getElementById("jrows").innerHTML=J.map(j=>`<tr><td>${esc(j[0])}</td><td>${esc(j[1])}</td></tr>`).join("");
+const INC=["Q1 journal selection: scope, quartile, review time and APC compared","Gap and problem formulation","Literature review and survey","Methodology and experiments: datasets, baselines, metrics, ablations","Algorithms and proofs","Implementation with tests and logging","Statistics and results","Figures and LaTeX","Reproducibility: public GitHub repository and DOI","Submission and rebuttal: similarity check, AI-use disclosure, cover letter"];
+document.getElementById("incl").innerHTML=INC.map(x=>`<li>${esc(x)}</li>`).join("");
+const AR=["CSE","AI","ML","DL","RL","CV","LLM","Security","Data Science","Agentic AI","Blockchain","Quantum ML","Edge AI","Federated Learning","Graph Neural Nets","Transformers","GANs","AutoML","Explainable AI","IoT"];
+document.getElementById("areas").innerHTML=AR.map(a=>`<span class="chip">${esc(a)}</span>`).join("");
+document.getElementById("ar").innerHTML=AR.map(a=>`<option${a==="LLM"?" selected":""}>${esc(a)}</option>`).join("");
+const R=[["Lead researcher","Conceptualization, methodology","Frames the problem, sets the hypotheses and owns the paper's argument."],["Experiments & software","Software, investigation","Builds the models and pipelines and runs every experiment reproducibly."],["Data & validation","Data curation, validation","Prepares datasets, checks for leakage and bias, and runs the statistical tests."],["Analysis & figures","Formal analysis, visualization","Runs the ablations and turns results into checked tables and figures."],["Literature & drafting","Writing, original draft","Writes the related-work survey and drafts the introduction and discussion."],["Review & revision","Writing, review & editing","Edits to journal style, writes the cover letter and leads the reviewer response."]];
+document.getElementById("roles").innerHTML=R.map((r,i)=>`<div class="role"><span class="n">${i+1}</span><h3>${esc(r[0])}</h3><p style="margin:0;color:var(--mut);font-size:15px">${esc(r[2])}</p><small>CRediT: ${esc(r[1])}</small></div>`).join("");
+const Z=[0,0,0,0,0,0];
+const P=[
+{t:"Vision-language fusion of chest X-rays and radiology reports for explainable disease diagnosis",f:"Healthcare",m:"Image + clinical text",s:Z},
+{t:"Multimodal crop yield prediction from satellite imagery, soil sensors and weather time series",f:"Agriculture",m:"Satellite + IoT sensors + time series",s:Z},
+{t:"Camera, LiDAR and radar fusion transformers for robust 3D object detection in adverse weather",f:"Transportation",m:"Image + point cloud + radar",s:Z},
+{t:"Audio, video and text emotion recognition with cross-modal attention for mental-health screening",f:"Affective computing",m:"Audio + video + text",s:Z},
+{t:"Vibration, thermal-image and acoustic fusion for predictive maintenance of rotating machinery",f:"Industry 4.0",m:"Vibration + thermal image + acoustic",s:Z},
+{t:"Multimodal market forecasting from financial news, earnings-call audio and price series",f:"Finance",m:"Text + audio + time series",s:Z},
+{t:"SAR and optical image fusion for rapid flood and disaster damage mapping",f:"Remote sensing",m:"SAR + multispectral optical",s:Z},
+{t:"Detecting multimodal misinformation and deepfakes by combining image forensics with text semantics",f:"Security",m:"Image + video + text",s:Z},
+{t:"Predicting student engagement from classroom video, eye-tracking and clickstream data",f:"Education",m:"Video + gaze + interaction logs",s:Z},
+{t:"Smart-grid load forecasting from smart-meter data, weather and satellite imagery",f:"Energy",m:"Time series + weather + satellite",s:Z}];
+const fields=["All",...new Set(P.map(p=>p.f))];let cur="All";
+const fl=document.getElementById("filters"),gr=document.getElementById("grid");
+const drawP=()=>{fl.innerHTML=fields.map(x=>`<button type="button" aria-pressed="${x===cur}" data-f="${esc(x)}">${esc(x)}</button>`).join("");
+ gr.innerHTML=P.filter(p=>cur==="All"||p.f===cur).map(p=>{const o=p.s.filter(x=>!x).length;return `<article class="proj"><span class="chip" style="align-self:flex-start;font-size:13px">${esc(p.f)}</span><h3>${esc(p.t)}</h3><div class="v"><b style="font-weight:500;color:var(--ink)">Modalities:</b> ${esc(p.m)}</div><div class="v"><b style="font-weight:500;color:var(--ink)">Target:</b> Q1 SCI journal</div><div class="seats" aria-label="${o} of 6 roles open">${p.s.map((x,k)=>`<span class="seat${x?" f":""}" title="${esc(R[k][0])}${x?", filled":", open"}">${k+1}</span>`).join("")}</div><div class="row"><span>${o} of 6 roles open</span>${o?`<a href="#enquire" data-t="1" data-p="${P.indexOf(p)}">Apply</a>`:`<span class="note">Team full</span>`}</div></article>`}).join("")};
+fl.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=b.dataset.f;drawP()});
+drawP();
+document.getElementById("pj").innerHTML=`<option value="">Not applicable (training)</option>`+P.map((p,i)=>`<option value="${i}">${esc(p.f)}: ${esc(p.t)}</option>`).join("");
+document.getElementById("pr").innerHTML=R.map((r,i)=>`<option>${i+1}. ${esc(r[0])}</option>`).join("");
+document.addEventListener("click",e=>{const a=e.target.closest("[data-t]");if(!a)return;document.getElementById("tr").selectedIndex=+a.dataset.t;if(a.dataset.p!==undefined)document.getElementById("pj").value=a.dataset.p});
+const vd=document.getElementById("vd"),cks=[1,2,3,4,5].map(i=>document.getElementById("c"+i));
+const verdict=()=>{const n=cks.filter(c=>c.checked).length;let h,b;
+ if(n>=4){h="The 12-day training fits you";b="You have what the pace needs. Enquire for the next batch."}
+ else if(n>=2){h="Close. Start with a scoping call";b="We'll check what's missing. Often a week of preparation is enough, or a cohort role suits you better."}
+ else{h="A collaboration cohort is the better start";b="Join a team in a role that matches your skills, and build toward leading your own paper."}
+ vd.innerHTML=`<b>${h}</b><span>${b} (${n} of 5 ticked)</span>`};
+cks.forEach(c=>c.addEventListener("change",verdict));cks[0].checked=cks[1].checked=cks[3].checked=true;verdict();
+const FAQ=[["Will my paper definitely be accepted?","No. Nobody can honestly promise that. Editors and reviewers decide. You leave Day 12 with a submitted manuscript, a submission ID and a rebuttal template, and we support the revision."],["Can I buy a first or second author position?","No. In the training you write your own paper. In cohorts, seats are roles, and author order is set by contribution at internal review and written into the CRediT statement. Q1 publishers retract papers with paid authorship."],["Do you write the paper for me?","No. Mentors teach, review each day's section and show you how to fix it. That's also why the paper will survive peer review: you can defend every part of it."],["What if I'm not from an LLM background?","The program is built around large language model research, but we mentor across 20 areas, from computer vision to blockchain and IoT."],["Are APCs included in the fee?","No. Open-access article processing charges are set by the journal and paid to it. On Day 1 we compare APCs along with scope, quartile and review time."],["How are sessions timed for international participants?","Live sessions are scheduled to suit your time zone over 12 consecutive days."]];
+document.getElementById("faql").innerHTML=FAQ.map((q,i)=>`<details${i?"":" open"}><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join("");
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const er=document.getElementById("er");
+ if(!v("nm")||!/^\S+@\S+\.\S+$/.test(v("em"))){er.textContent="Please enter your name and a valid email.";return}
+ if(!document.getElementById("ag").checked){er.textContent="Please tick the acknowledgement.";return}
+ er.textContent="";
+ const body=["Name: "+v("nm"),"Email: "+v("em"),"Phone/WhatsApp: "+v("ph"),"Country: "+v("co"),"Track: "+v("tr"),"Project: "+(v("pj")===""?"Not applicable":P[+v("pj")].t),"Role wanted: "+(v("pj")===""?"Not applicable":v("pr")),"Role: "+v("rl"),"Organisation: "+v("og"),"Research area: "+v("ar"),"Paper stage: "+v("st"),"Target journal: "+(v("tj")||"Not decided"),"Preferred start: "+v("ps"),"","Research summary:",v("sm")||"(none)"].join("\n");
+ document.getElementById("txt").textContent=body;
+ document.getElementById("ml").href="mailto:ceo@algoprofessor.com?subject="+encodeURIComponent("Enquiry: "+v("tr"))+"&body="+encodeURIComponent(body);
+ const o=document.getElementById("out");o.style.display="block";o.scrollIntoView({block:"nearest"})});
+document.getElementById("cp").addEventListener("click",async e=>{try{await navigator.clipboard.writeText(document.getElementById("txt").textContent);e.target.textContent="Copied"}catch(_){e.target.textContent="Select the text to copy"}});
+}
+</script>
+<script>
+{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const io=new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);count(e.target)}}},{threshold:.08,rootMargin:"0px 0px -5% 0px"});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll(".rv").forEach(el=>el.classList.add("in")),4000);
+function animNum(el,to,suf){if(reduce){el.textContent=to.toLocaleString("en-IN")+suf;return}const t0=performance.now(),d=1400;const st=t=>{const k=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v.toLocaleString("en-IN")+suf;if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+function count(root){root.querySelectorAll("[data-n]").forEach(el=>{if(el.dataset.done)return;el.dataset.done=1;animNum(el,+el.dataset.n,el.dataset.s||"")})}
+const prog=document.getElementById("prog");
+const onScroll=()=>{const m=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${m>0?scrollY/m:0})`};
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+if(!reduce&&matchMedia("(hover:hover)").matches){
+ document.addEventListener("pointermove",e=>{const c=e.target.closest(".tilt,.role,.proj,.fee,.stat");document.querySelectorAll(".tilting").forEach(x=>{if(x!==c){x.style.transform="";x.classList.remove("tilting")}});if(!c)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;const k=c.id==="cal"?2:6;c.classList.add("tilting");c.style.transition="transform .12s ease";c.style.transform=`perspective(900px) rotateX(${(-y*k).toFixed(2)}deg) rotateY(${(x*k).toFixed(2)}deg) translateZ(0)`});
+ document.addEventListener("pointerleave",()=>document.querySelectorAll(".tilting").forEach(x=>{x.style.transform="";x.classList.remove("tilting")}));
+}
+const vt=document.getElementById("vcTotal"),vn=document.getElementById("vcNav"),vl=document.getElementById("vcLbl");
+fetch("counter.php",{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{if(typeof d.total!=="number")throw 0;animNum(vt,d.total,"");vn.textContent=d.total.toLocaleString("en-IN")+" visitors";vl.textContent=`website visitors · ${Number(d.today)||0} today`}).catch(()=>{vt.textContent="Live";vl.textContent="visitor count shows on the live site";vn.textContent="Live counter"});
+}
+</script>
+<script type="module">
+import * as THREE from "three";
+const box=document.getElementById("globe"),canvas=document.getElementById("webgl");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const small=innerWidth<768||(navigator.hardwareConcurrency||8)<=4;
+let renderer;
+try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true})}catch(e){canvas.remove();throw e}
+renderer.setPixelRatio(Math.min(devicePixelRatio,small?1.5:2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(40,1,.05,50);camera.position.z=6.4;
+const world=new THREE.Group();world.rotation.x=.35;scene.add(world);
+// soft round dot sprite
+const sc=document.createElement("canvas");sc.width=sc.height=64;const cx=sc.getContext("2d");const gr=cx.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,"rgba(255,255,255,1)");gr.addColorStop(.45,"rgba(255,255,255,.9)");gr.addColorStop(1,"rgba(255,255,255,0)");cx.fillStyle=gr;cx.fillRect(0,0,64,64);
+const dot=new THREE.CanvasTexture(sc);dot.colorSpace=THREE.SRGBColorSpace;
+// globe of points (fibonacci sphere), clay to warm sand
+const N=small?1400:2600,R=1.7,pos=new Float32Array(N*3),col=new Float32Array(N*3);
+const c1=new THREE.Color("#d97757"),c2=new THREE.Color("#f0c9b4"),tmp=new THREE.Color();
+for(let i=0;i<N;i++){const y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=i*2.399963;pos[i*3]=Math.cos(th)*r*R;pos[i*3+1]=y*R;pos[i*3+2]=Math.sin(th)*r*R;tmp.copy(c1).lerp(c2,(y+1)/2);col[i*3]=tmp.r;col[i*3+1]=tmp.g;col[i*3+2]=tmp.b}
+const gg=new THREE.BufferGeometry();gg.setAttribute("position",new THREE.BufferAttribute(pos,3));gg.setAttribute("color",new THREE.BufferAttribute(col,3));
+const globe=new THREE.Points(gg,new THREE.PointsMaterial({size:.055,map:dot,vertexColors:true,transparent:true,depthWrite:false,sizeAttenuation:true}));world.add(globe);
+// inner glow core
+const core=new THREE.Mesh(new THREE.SphereGeometry(.55,48,32),new THREE.MeshBasicMaterial({color:0xd97757,transparent:true,opacity:.9}));world.add(core);
+const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:dot,color:0xe8906f,transparent:true,opacity:.55,depthWrite:false}));halo.scale.set(2.6,2.6,1);world.add(halo);
+// orbit ring + six role nodes
+const orbit=new THREE.Group();orbit.rotation.set(1.2,.2,.3);scene.add(orbit);
+const ringPts=[];for(let i=0;i<=200;i++){const a=i/200*Math.PI*2;ringPts.push(new THREE.Vector3(Math.cos(a)*2.45,Math.sin(a)*2.45,0))}
+orbit.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPts),new THREE.LineBasicMaterial({color:0xc15f3c,transparent:true,opacity:.35})));
+const nodes=[];for(let i=0;i<6;i++){const s=new THREE.Sprite(new THREE.SpriteMaterial({map:dot,color:i%2?0xc15f3c:0xe8906f,transparent:true,depthWrite:false}));s.scale.setScalar(.34);s.userData.a=i/6*Math.PI*2;orbit.add(s);nodes.push(s)}
+// light arcs: data flowing from nodes into the core
+const arcs=[];for(let i=0;i<6;i++){const g=new THREE.BufferGeometry();g.setAttribute("position",new THREE.BufferAttribute(new Float32Array(40*3),3));const l=new THREE.Points(g,new THREE.PointsMaterial({size:.07,map:dot,color:0xd97757,transparent:true,opacity:.85,depthWrite:false}));scene.add(l);arcs.push(l)}
+// state
+const S={mx:0,my:0,tx:0,ty:0,zoom:0};
+addEventListener("pointermove",e=>{S.tx=e.clientX/innerWidth-.5;S.ty=e.clientY/innerHeight-.5},{passive:true});
+// scroll zoom: the camera flies into the globe as the hero scrolls away; the headline zooms back
+gsap.registerPlugin(ScrollTrigger);
+if(!reduce){
+ ScrollTrigger.create({trigger:".hero",start:"top top",end:"bottom top",scrub:true,onUpdate:s=>{S.zoom=s.progress}});
+ gsap.to(box,{scale:1.35,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+ gsap.to(".zoomtxt",{scale:.9,opacity:.25,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"60% top",scrub:true}});
+ document.querySelectorAll(".band h2").forEach(el=>gsap.fromTo(el,{scale:.86,opacity:.3},{scale:1,opacity:1,ease:"none",scrollTrigger:{trigger:el,start:"top 95%",end:"top 60%",scrub:true}}));
+}
+const size=()=>{const w=box.clientWidth,h=box.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};
+new ResizeObserver(size).observe(box);size();
+let vis=true;new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(vis)loop()}).observe(box);
+const clock=new THREE.Clock();let t=0,running=false;const v=new THREE.Vector3(),w=new THREE.Vector3();
+function loop(){if(running)return;running=true;clock.getDelta();requestAnimationFrame(tick)}
+function tick(){if(!vis||document.hidden){running=false;return}
+ const dt=Math.min(clock.getDelta(),.05);if(!reduce)t+=dt;
+ S.mx+=(S.tx-S.mx)*.06;S.my+=(S.ty-S.my)*.06;
+ world.rotation.y=t*.18+S.mx*.8+S.zoom*2;world.rotation.x=.35+S.my*.5;
+ orbit.rotation.z=t*.25;orbit.rotation.y=.2+S.mx*.5;
+ camera.position.z=6.4-S.zoom*4.6;camera.position.x=S.mx*.4;camera.position.y=-S.my*.3;camera.lookAt(0,0,0);
+ const p=1+Math.sin(t*2.2)*.05;core.scale.setScalar(p);halo.material.opacity=.45+Math.sin(t*2.2)*.12;
+ nodes.forEach((n,i)=>{const a=n.userData.a;n.position.set(Math.cos(a)*2.45,Math.sin(a)*2.45,0);n.scale.setScalar(.3+.06*Math.sin(t*3+i))});
+ orbit.updateMatrixWorld();
+ arcs.forEach((l,i)=>{nodes[i].getWorldPosition(v);const a=l.geometry.attributes.position.array;for(let k=0;k<40;k++){const f=((k/40)+t*.35+i*.13)%1;w.copy(v).multiplyScalar(1-f);w.y+=Math.sin(f*Math.PI)*.35;a[k*3]=w.x;a[k*3+1]=w.y;a[k*3+2]=w.z}l.geometry.attributes.position.needsUpdate=true;l.material.opacity=.75*(1-S.zoom)});
+ renderer.render(scene,camera);requestAnimationFrame(tick)}
+loop();
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)loop()});
+</script>
+</body>
+</html>
